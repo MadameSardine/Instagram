@@ -6,13 +6,21 @@
 body{
   text-align: center;
   width: 100%;
+
+}
+
+#main-content-container{
+  display: block;
+  width: 100%;
 }
 #main-content{
   display: block;
+  position: relative;
   text-align: center;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(224, 225, 226);
   padding: 2em;
-  width: 900px;
+  width: 800px;
+  margin-left: 20%;
 }
 
 .post-box{
@@ -22,8 +30,8 @@ body{
   height: auto;
   width: 740px;
   padding-top: 40px;
-  border: 1px solid;
-  border-color: rgb(238, 238, 238);
+  border: 1px solid rgb(238, 238, 238);
+  margin-left: -40px;
 }
 
 .post-text-box{
@@ -46,5 +54,12 @@ ul {
   clear: left;
   display: block;
   width: 740px;
+}
+
+.comment_list{
+  border-top: 1px solid rgb(238, 238, 238);
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color: rgb(252, 252, 252);
 }
 
