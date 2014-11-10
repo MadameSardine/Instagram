@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background-color: rgb(63, 109, 148);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.text-muted{
+  text-align: center;
+  color: rgb(208, 218,228 );
+  font-family: 'Pacifico', cursive;
+}
+
+.bar-link a {
+  margin-top: 20px;
+  color: rgb(208, 218,228 );
+}
+

@@ -46,4 +46,7 @@ gem 'paperclip'
 gem 'warden', group: :test
 gem 'database_cleaner', group: :test
 gem 'poltergeist', group: :test
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
