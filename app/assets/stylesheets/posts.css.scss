@@ -12,7 +12,7 @@ body{
   text-align: center;
   background-color: rgb(252, 252, 252);
   padding: 2em;
-  width: 500px;
+  width: 900px;
 }
 
 .post-box{
@@ -20,8 +20,8 @@ body{
   background-color: white;
   display: block;
   height: auto;
-  width: 350px;
-  padding: 20px;
+  width: 740px;
+  padding-top: 40px;
   border: 1px solid;
   border-color: rgb(238, 238, 238);
 }
@@ -36,14 +36,15 @@ ul {
 }
 
 .post-text-box p{
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
+.email{
+  color: rgb(67, 112, 149);
+}
 .comment-content{
   clear: left;
   display: block;
-  width: 300px;
-  margin-left: -35px;
-  padding: 5px;
+  width: 740px;
 }
 
