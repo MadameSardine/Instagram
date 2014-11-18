@@ -50,5 +50,5 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'rails_12factor', group: :production
-gem 'aws-sdk', group: :production
+gem 'aws-sdk' # group: :production
 
