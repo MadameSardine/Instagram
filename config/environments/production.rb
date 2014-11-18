@@ -11,6 +11,9 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
+
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
