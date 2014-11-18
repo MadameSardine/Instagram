@@ -9,6 +9,9 @@
               <article class="post-text-box">
                 <p class="email"><% if post.user %><%= post.user.email %><% end %></p>
                 <% if user_signed_in? %>
+                  <% if post.user == current_user %>
+                    <p class="delete-link"><%= link_to 'Delete', post_path(post), method: :delete %></p>
+                  <% end %>
                   <p class="buy-link"><%= link_to 'Buy', new_post_charge_path(post) %></p>
                   <p class="likes-section"><%= link_to image_tag("/images/heart.png", :alt => 'heart-logo', :class => 'heart-logo'), post_likes_path(post), class: 'likes-link' %> <span class="likes_count"><%= post.likes.count %> </span> liked this.</p>
                   <p class="comment-link"><%= link_to "Comment", new_post_comment_path(post) %></p>

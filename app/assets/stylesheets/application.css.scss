@@ -30,6 +30,18 @@
   z-index: 1000;
 }
 
+
+#header-bar{
+  width: 800px;
+  position: relative;
+  display: block;
+  margin-top: 0px;
+  margin-left: 15%;
+  height: 60px;
+  overflow: hidden;
+
+}
+
 #title{
   display: block;
   width: 200px;
@@ -49,16 +61,6 @@
   color: rgb(208, 218,228 );
 }
 
-#header-bar{
-  width: 800px;
-  position: relative;
-  display: block;
-  margin-top: 0px;
-  margin-left: 15%;
-  height: 60px;
-  overflow: hidden;
-
-}
 
 #right-nav{
   width: 300px;
