@@ -1,35 +1,35 @@
 <div id="main-content-container">
   <div id="main-content">
-    <% if user_signed_in? %>
-      <% if @posts.any? %>
-        <ul>
-          <% @posts.each do |post| %>
-            <li class="posts">
-              <section class="post-box">
-                <p class="image"><%= image_tag post.image.url(:medium) %></p>
-                <article class="post-text-box">
-                  <p class="email"><% if post.user %><%= post.user.email %><% end %></p>
+    <% if @posts.any? %>
+      <ul>
+        <% @posts.each do |post| %>
+          <li class="posts">
+            <section class="post-box">
+              <p class="image"><%= image_tag post.image.url(:medium) %></p>
+              <article class="post-text-box">
+                <p class="email"><% if post.user %><%= post.user.email %><% end %></p>
+                <% if user_signed_in? %>
                   <p class="buy-link"><%= link_to 'Buy', new_post_charge_path(post) %></p>
                   <p class="likes-section"><%= link_to image_tag("/images/heart.png", :alt => 'heart-logo', :class => 'heart-logo'), post_likes_path(post), class: 'likes-link' %> <span class="likes_count"><%= post.likes.count %> </span> liked this.</p>
                   <p class="comment-link"><%= link_to "Comment", new_post_comment_path(post) %></p>
-                  <article class="comment_list"><% if post.comments.any? %>
-                    <ul>
-                      <% post.comments.each do |comment| %>
-                        <li class="comment-content">
-                          <span class="email"><% if comment.user %><%= comment.user.email%><% end %></span> : <%= comment.content %>
-                        </li>
-                      <% end %>
-                    </ul>
-                  <% end %>
-                  </article>
+                <% end %>
+                <article class="comment_list"><% if post.comments.any? %>
+                  <ul>
+                    <% post.comments.each do |comment| %>
+                      <li class="comment-content">
+                        <span class="email"><% if comment.user %><%= comment.user.email%><% end %></span> : <%= comment.content %>
+                      </li>
+                    <% end %>
+                  </ul>
+                <% end %>
                 </article>
-              </section>
-            </li>
-          <% end %>
-        </ul>
-      <% else %>
-        No posts yet.
-      <% end %>
+              </article>
+            </section>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      No posts yet.
     <% end %>
   </div>
 </div>

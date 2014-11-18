@@ -8,9 +8,9 @@ describe 'Viewing posts' do
 
   context 'User not logged in' do
 
-    it 'can not see posts' do
+    it 'can see posts' do
       visit '/'
-      expect(page).not_to have_css ('.posts')
+      expect(page).to have_css ('.posts')
     end
 
   context 'User is logged in' do
