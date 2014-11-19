@@ -20,7 +20,8 @@
                   <ul>
                     <% post.comments.each do |comment| %>
                       <li class="comment-content">
-                        <span class="email"><% if comment.user %><%= comment.user.email%><% end %></span> : <%= comment.content %>
+                        <span class="email"><% if comment.user %><%= comment.user.email%><% end %></span> : <%= comment.content %><% if comment.user == current_user %>   <%= link_to image_tag('/images/delete.png', :alt => 'delete-logo', :class => 'delete-logo'), comment_path(comment), method: :delete %>
+                        <% end %>
                       </li>
                     <% end %>
                   </ul>
