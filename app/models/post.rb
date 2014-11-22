@@ -6,4 +6,16 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   belongs_to :user
+
+  def self.all_in_reverse_order
+    all.reverse
+  end
+
+  def self.new_with(params)
+    create(params)
+  end
+
+  def self.remove_with_id(id)
+    find(id).destroy
+  end
 end
